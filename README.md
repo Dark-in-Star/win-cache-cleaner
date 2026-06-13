@@ -49,6 +49,8 @@ No dependencies · Works on any Windows version
 
 > **Note:** Both tools require **Administrator** privileges. The `.exe` auto-prompts via UAC. The `.bat` must be right-clicked → _Run as administrator_.
 
+> **SmartScreen warning?** Windows may show _"Windows protected your PC"_ for unsigned apps. Click **More info → Run anyway**. This is normal for new open-source executables without a paid code-signing certificate. Source code is fully open for audit above.
+
 </div>
 
 ---
