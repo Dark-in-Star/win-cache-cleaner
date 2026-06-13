@@ -22,7 +22,7 @@
 
 ### 🖥️ GUI Application
 
-<a href="../../releases/latest/download/WinCacheCleaner.exe">
+<a href="https://github.com/Dark-in-Star/win-cache-cleaner/releases/latest/download/WinCacheCleaner.exe">
   <img src="https://img.shields.io/badge/Download%20.EXE-WinCacheCleaner-6366F1?style=for-the-badge&logo=windows&logoColor=white" alt="Download EXE"/>
 </a>
 
@@ -35,7 +35,7 @@ Requires Windows 10/11 · UAC elevation auto-prompted
 
 ### 📜 Batch Script
 
-<a href="cleaner.bat">
+<a href="https://github.com/Dark-in-Star/win-cache-cleaner/releases/latest/download/cleaner.bat">
   <img src="https://img.shields.io/badge/Download%20.BAT-cleaner.bat-4A5568?style=for-the-badge&logo=windowsterminal&logoColor=white" alt="Download BAT"/>
 </a>
 
