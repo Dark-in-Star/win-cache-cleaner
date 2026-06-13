@@ -102,22 +102,18 @@ No dependencies · Works on any Windows version
 
 <table>
 <tr>
-<td align="center">
-<img src="screenshots/dark-mode.png" width="340" alt="Dark Mode"/>
-<br/><sub><b>🌙 Dark Mode — Task Selection</b></sub>
-</td>
-<td align="center">
-<img src="screenshots/light-mode.png" width="340" alt="Light Mode"/>
-<br/><sub><b>☀️ Light Mode</b></sub>
+<td align="center" colspan="2">
+<img src="screenshots/image.png" width="560" alt="Windows Cache Cleaner — Dark Mode"/>
+<br/><sub><b>🌙 Dark Mode — Task Selection with Neon UI</b></sub>
 </td>
 </tr>
 <tr>
 <td align="center">
-<img src="screenshots/cleanup-running.png" width="340" alt="Cleanup Running"/>
+<img src="screenshots/image2.png" width="340" alt="Cleanup Running"/>
 <br/><sub><b>⚡ Cleanup In Progress</b></sub>
 </td>
 <td align="center">
-<img src="screenshots/cleanup-complete.png" width="340" alt="Cleanup Complete"/>
+<img src="screenshots/image3.png" width="340" alt="Cleanup Complete"/>
 <br/><sub><b>✅ Cleanup Complete — Total Freed</b></sub>
 </td>
 </tr>
