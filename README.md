@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="icon.png" alt="Windows Cache Cleaner" width="110" style="border-radius: 22px;" />
+<img src="icon.png" alt="Windows Cache Cleaner" width="180" style="border-radius: 28px;" />
 
 # 🧹 Windows Cache Cleaner
 
@@ -100,7 +100,28 @@ No dependencies · Works on any Windows version
 
 <div align="center">
 
-> _Dark neon theme with gradient border ring, per-task checkboxes, live log, and neon RUN CLEANUP button_
+<table>
+<tr>
+<td align="center">
+<img src="screenshots/dark-mode.png" width="340" alt="Dark Mode"/>
+<br/><sub><b>🌙 Dark Mode — Task Selection</b></sub>
+</td>
+<td align="center">
+<img src="screenshots/light-mode.png" width="340" alt="Light Mode"/>
+<br/><sub><b>☀️ Light Mode</b></sub>
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="screenshots/cleanup-running.png" width="340" alt="Cleanup Running"/>
+<br/><sub><b>⚡ Cleanup In Progress</b></sub>
+</td>
+<td align="center">
+<img src="screenshots/cleanup-complete.png" width="340" alt="Cleanup Complete"/>
+<br/><sub><b>✅ Cleanup Complete — Total Freed</b></sub>
+</td>
+</tr>
+</table>
 
 </div>
 
