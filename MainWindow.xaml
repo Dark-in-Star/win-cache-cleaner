@@ -10,7 +10,12 @@
         ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen"
         ShowInTaskbar="True"
-        Icon="icon.png">
+        Icon="icon.png"
+        UseLayoutRounding="True"
+        SnapsToDevicePixels="True"
+        TextOptions.TextFormattingMode="Display"
+        TextOptions.TextRenderingMode="ClearType"
+        RenderOptions.ClearTypeHint="Enabled">
 
     <Window.Resources>
 
@@ -156,7 +161,7 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="Bg" Property="Background" Value="#1E1F35"/>
+                                <Setter TargetName="Bg" Property="Background" Value="{DynamicResource HoverBackground}"/>
                                 <Setter TargetName="Bg" Property="BorderBrush" Value="#6366F1"/>
                                 <Setter Property="Foreground" Value="#818CF8"/>
                                 <Setter TargetName="Bg" Property="Effect">
@@ -191,7 +196,7 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="Bg" Property="Background" Value="#1E1F35"/>
+                                <Setter TargetName="Bg" Property="Background" Value="{DynamicResource HoverBackground}"/>
                                 <Setter Property="Foreground" Value="#818CF8"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
@@ -266,7 +271,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="ScrollBar">
                         <Grid>
-                            <Border CornerRadius="3" Background="#1A1B30" Opacity="0.5"/>
+                            <Border CornerRadius="3" Background="{DynamicResource ProgressTrackColor}" Opacity="0.5"/>
                             <Track x:Name="PART_Track" IsDirectionReversed="True">
                                 <Track.Thumb>
                                     <Thumb>
@@ -338,7 +343,10 @@
             <!-- ══ Inner content (1.5px gap reveals ring) ════════════════ -->
             <Border CornerRadius="13" Margin="1.5"
                     Background="{DynamicResource WindowBackground}"
-                    ClipToBounds="True">
+                    ClipToBounds="True"
+                    TextOptions.TextFormattingMode="Display"
+                    TextOptions.TextRenderingMode="ClearType"
+                    RenderOptions.ClearTypeHint="Enabled">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50"/>
@@ -393,11 +401,7 @@
                     <Border Grid.Row="0"
                             MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
                         <Border.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#080910" Offset="0"/>
-                                <GradientStop Color="#0E0F20" Offset="0.5"/>
-                                <GradientStop Color="#080910" Offset="1"/>
-                            </LinearGradientBrush>
+                            <DynamicResource ResourceKey="HeaderGradient"/>
                         </Border.Background>
                         <Grid Margin="14,0,8,0">
                             <Grid.ColumnDefinitions>
@@ -406,8 +410,10 @@
                             </Grid.ColumnDefinitions>
 
                             <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
-                                <TextBlock Text="🧹" FontSize="18" VerticalAlignment="Center"/>
-                                <TextBlock Text="  Windows Cache Cleaner"
+                                <Image Source="icon.png" Width="26" Height="26"
+                                       VerticalAlignment="Center" Margin="0,0,8,0"
+                                       RenderOptions.BitmapScalingMode="HighQuality"/>
+                                <TextBlock Text="Windows Cache Cleaner"
                                            FontSize="14" FontWeight="SemiBold"
                                            VerticalAlignment="Center">
                                     <TextBlock.Foreground>
@@ -472,7 +478,7 @@
                     </Border>
 
                     <!-- Subtle separator -->
-                    <Border Grid.Row="3" Background="#1C1D30"/>
+                    <Border Grid.Row="3" Background="{DynamicResource SeparatorColor}"/>
 
                     <!-- ── Task grid ────────────────────────────────────────── -->
                     <ScrollViewer Grid.Row="4"
@@ -492,13 +498,8 @@
                                         Margin="4,3" Padding="12,10"
                                         CornerRadius="8"
                                         BorderThickness="1"
-                                        BorderBrush="#252640">
-                                    <Border.Background>
-                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                            <GradientStop Color="#171829" Offset="0"/>
-                                            <GradientStop Color="#1C1D30" Offset="1"/>
-                                        </LinearGradientBrush>
-                                    </Border.Background>
+                                        BorderBrush="{DynamicResource BorderColor}"
+                                        Background="{DynamicResource CardGradient}">
                                     <Border.Effect>
                                         <DropShadowEffect Color="#6366F1" BlurRadius="6" ShadowDepth="0" Opacity="0.07"/>
                                     </Border.Effect>
@@ -535,12 +536,9 @@
                     <Border Grid.Row="6"
                             Margin="16,0" Padding="16,13"
                             CornerRadius="10"
-                            BorderThickness="1" BorderBrush="#252640">
+                            BorderThickness="1" BorderBrush="{DynamicResource BorderColor}">
                         <Border.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                <GradientStop Color="#141525" Offset="0"/>
-                                <GradientStop Color="#191A2E" Offset="1"/>
-                            </LinearGradientBrush>
+                            <DynamicResource ResourceKey="ProgressCardGradient"/>
                         </Border.Background>
                         <Border.Effect>
                             <DropShadowEffect Color="#6366F1" BlurRadius="10" ShadowDepth="0" Opacity="0.1"/>
@@ -565,14 +563,9 @@
                     <!-- ── Log panel ────────────────────────────────────────── -->
                     <Border Grid.Row="8"
                             Margin="16,0" CornerRadius="10"
-                            BorderThickness="1" BorderBrush="#1E1F35"
+                            BorderThickness="1" BorderBrush="{DynamicResource BorderColor}"
+                            Background="{DynamicResource LogGradient}"
                             ClipToBounds="True">
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                <GradientStop Color="#0A0B14" Offset="0"/>
-                                <GradientStop Color="#0D0E1C" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
                         <ScrollViewer x:Name="LogScroll"
                                       VerticalScrollBarVisibility="Auto"
                                       Style="{StaticResource StyledScrollViewer}">
@@ -624,14 +617,7 @@
                     </Border>
 
                     <!-- ── Footer ───────────────────────────────────────────── -->
-                    <Border Grid.Row="10">
-                        <Border.Background>
-                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-                                <GradientStop Color="#080910" Offset="0"/>
-                                <GradientStop Color="#0E0F20" Offset="0.5"/>
-                                <GradientStop Color="#080910" Offset="1"/>
-                            </LinearGradientBrush>
-                        </Border.Background>
+                    <Border Grid.Row="10" Background="{DynamicResource HeaderGradient}">
                         <Grid Margin="16,0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>

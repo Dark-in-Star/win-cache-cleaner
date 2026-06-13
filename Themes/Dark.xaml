@@ -1,17 +1,18 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <!-- ── Backgrounds ────────────────────────────────────────────────── -->
+    <!-- ── Solid backgrounds ──────────────────────────────────────────── -->
     <SolidColorBrush x:Key="WindowBackground"    Color="#0D0E1A"/>
     <SolidColorBrush x:Key="HeaderBackground"    Color="#080910"/>
     <SolidColorBrush x:Key="CardBackground"      Color="#171829"/>
     <SolidColorBrush x:Key="LogBackground"       Color="#0A0B14"/>
+    <SolidColorBrush x:Key="HoverBackground"     Color="#1E1F35"/>
 
     <!-- ── Text ───────────────────────────────────────────────────────── -->
     <SolidColorBrush x:Key="TextPrimary"         Color="#E2E8F8"/>
     <SolidColorBrush x:Key="TextSecondary"       Color="#6B7DB3"/>
 
-    <!-- ── Neon accent ────────────────────────────────────────────────── -->
+    <!-- ── Accent ─────────────────────────────────────────────────────── -->
     <SolidColorBrush x:Key="AccentColor"         Color="#6366F1"/>
     <SolidColorBrush x:Key="AccentHoverColor"    Color="#818CF8"/>
 
@@ -24,6 +25,28 @@
     <SolidColorBrush x:Key="BorderColor"         Color="#252640"/>
     <SolidColorBrush x:Key="ButtonForeground"    Color="#FFFFFF"/>
     <SolidColorBrush x:Key="ProgressTrackColor"  Color="#1A1B30"/>
-    <SolidColorBrush x:Key="SeparatorColor"      Color="#252640"/>
+    <SolidColorBrush x:Key="SeparatorColor"      Color="#1C1D30"/>
+
+    <!-- ── Gradient brushes ───────────────────────────────────────────── -->
+    <LinearGradientBrush x:Key="HeaderGradient" StartPoint="0,0" EndPoint="1,0">
+        <GradientStop Color="#080910" Offset="0"/>
+        <GradientStop Color="#0E0F20" Offset="0.5"/>
+        <GradientStop Color="#080910" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="CardGradient" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#171829" Offset="0"/>
+        <GradientStop Color="#1C1D30" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ProgressCardGradient" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#141525" Offset="0"/>
+        <GradientStop Color="#191A2E" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="LogGradient" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#0A0B14" Offset="0"/>
+        <GradientStop Color="#0D0E1C" Offset="1"/>
+    </LinearGradientBrush>
 
 </ResourceDictionary>
